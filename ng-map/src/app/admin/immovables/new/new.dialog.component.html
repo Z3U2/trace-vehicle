@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Location Map</h1>
+<div mat-dialog-content>
+    <div #map class="map"></div>
+</div>
+<div class="flex-parent" mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.latLng" cdkFocusInitial>Ok</button>
+</div>

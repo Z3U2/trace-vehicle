@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar class="toolbar" color="primary">
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="flex">Trakr</span>
+
+
+  <span class="flex middle">{{time}}</span>
+
+  <span class="flex">
+    <a mat-icon-button routerLink='/history'>Hi</a>
+    <a mat-icon-button routerLink='/rtmap'>Rt</a>
+    <a mat-icon-button routerLink='/admin'>Ad</a>
+  </span>
+</mat-toolbar>
+<!-- <div class="top-bar">
+  <span class="io-bus-tracker">Transport Tracker</span>
+  <span class="display-time">{{time}}</span>
+  <span class="google-maps-apis"></span>
+</div> -->
+<router-outlet></router-outlet>

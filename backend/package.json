@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "prettier": "prettier --write --single-quote --bracket-spacing=false *.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "firebase-admin": "^5.11.0",
+    "moment": "^2.21.0",
+    "mongoose": "^5.0.12",
+    "prettier": "^1.11.1"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "morgan": "^1.9.0",
+    "papaparse": "^4.3.7"
+  }
+}

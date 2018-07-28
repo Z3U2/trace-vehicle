@@ -1,0 +1,14 @@
+<mat-card style="display: flex;flex-direction: column">
+  <form style="width:100%">
+    <mat-form-field class="full-width">
+      <input name="id" matInput placeholder="Id" [(ngModel)]="id" >
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input name="type" matInput placeholder="Type" [(ngModel)]="type">
+    </mat-form-field>
+    <div class="row" style="justify-content: center">
+      <button style="width:200px" mat-button (click)="create()">Create</button>
+      <button style="width:200px" mat-button>Clear</button>
+    </div>
+  </form>
+</mat-card>

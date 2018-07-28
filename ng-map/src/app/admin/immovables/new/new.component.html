@@ -1,0 +1,24 @@
+<mat-card style="display: flex;flex-direction: column">
+  <form style="width:100%">
+    <mat-form-field class="full-width"  >
+      <input name="id" matInput placeholder="Id" [(ngModel)]="id" (change)="change()">
+    </mat-form-field>
+    <div class="row space">
+      <div style="width:90%">
+        <mat-form-field class="full-width">
+          <input name="lat" matInput placeholder="Latitude" [(ngModel)]="lat">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input name="lng" matInput placeholder="Longitude" [(ngModel)]="lng">
+        </mat-form-field>
+      </div>
+      <div style="width: 5%" style="display: flex;flex-direction: column">
+        <button mat-fab color = "primary" class="centered" (click)="openMap()"><mat-icon>map</mat-icon></button>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center">
+      <button style="width:200px" mat-button (click)="create()">Create</button>
+      <button style="width:200px" mat-button>Clear</button>
+    </div>
+  </form>
+</mat-card>

@@ -1,0 +1,81 @@
+<mat-sidenav-container class="side-cont" >
+    <mat-sidenav #sidenav mode="over" class="selection-sidenav">
+        <mat-card class="buttons">
+            <div class="button-types">
+                <button (click)="vehicles()" class="no-padding" mat-button>
+                    <mat-icon>local_shipping</mat-icon>
+                </button>
+                <button (click)="immovables()" class="no-padding" mat-button>
+                    <mat-icon>pin_drop</mat-icon>
+                </button>
+                <button (click)="alerts()" class="no-padding" mat-button>
+                    <mat-icon>warning</mat-icon>
+                </button>
+                <span *ngIf="alertNotification.n" class="notification "><b>{{alertNotification.n}}</b></span>
+            </div>
+        </mat-card>
+        <mat-accordion *ngIf="items">
+            <mat-expansion-panel *ngFor="let item of items | iterable">
+                <mat-expansion-panel-header>
+                    {{type}} {{item.key}}
+                </mat-expansion-panel-header>
+                
+                
+                <mat-list *ngIf="type=='Véhicule'">
+                    <mat-list-item>
+                        <div class="list-item">
+                            <span>Réservoir :</span>
+                            <span>{{item.value.fuel | number}}%</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="list-item">
+                            <span>Vitesse :</span>
+                            <span>{{item.value.velocity | number}}km/h</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="list-item">
+                            <span>Charge poids :</span>
+                            <span>{{item.value.load | number}}%</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="list-item-btn">
+                            <button mat-button (click)="goTo(item.value)">Trouver</button>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+
+                
+                <mat-list *ngIf="type=='Point' || type=='Alerte'">
+                    <mat-list-item>
+                        <div class="list-item">
+                            <span>Charge :</span>
+                            <span>{{item.value.load}}</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="list-item-btn">
+                            <button mat-button (click)="goTo(item)">Trouver</button>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+
+                
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div #map class="map"></div>
+        <div class="button-row">
+            <button mat-fab class="search-btn" 
+            (click)="sidenav.toggle()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

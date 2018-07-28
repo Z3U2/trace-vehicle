@@ -1,0 +1,82 @@
+.map {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.buttons {
+  padding:2px;
+}
+
+// button {
+//   width: 100%;
+//   height:100%;
+//   padding:0;
+// }
+
+.notification {
+  display:block;
+  position: absolute;
+  color: white;
+  background-color: #f44336;
+  border-radius: 50%;
+  height:14px;
+  width:15px;
+  text-align: center;
+  font-size: 10px;
+  padding-top:1px;
+  right:30px;
+  top: 20px;
+  z-index: 300;
+}
+
+.search-btn{
+  background-color: #3f51b5!important;
+}
+
+.side-cont {
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.button-types{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-row {
+  position: absolute;
+  top:10px;
+  left:10px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.selection-sidenav{
+  width:300px;
+}
+
+.no-padding {
+  // padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-item-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
