@@ -1,5 +1,8 @@
 # Vehicle Tracing project root  
 
+Vehicle Tracking applied to Waste Collection vehicles web application
+Built using Angular in the frontend and Node/Express in the back 
+
 /!\ Set up backend before ng-map !
 
 /backend/ => server side responsible for updating positions

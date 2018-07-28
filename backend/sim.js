@@ -23,10 +23,10 @@ const url = 'http://localhost:3000/api/data';
 
 
 // This line opens the file as a readable stream
-const readStreamOld = fs.createReadStream("C:/Users/Seed/Documents/pfe/new_data.csv");
-const readStreamStuck = fs.createReadStream("C:/Users/Seed/Documents/pfe/stuck.csv");
-const readStreamSlow = fs.createReadStream("C:/Users/Seed/Documents/pfe/slow.csv");
-const readStreamNice = fs.createReadStream("C:/Users/Seed/Documents/pfe/nice.csv");
+const readStreamOld = fs.createReadStream("./gps-data/new_data.csv");
+const readStreamStuck = fs.createReadStream("./gps-data/stuck.csv");
+const readStreamSlow = fs.createReadStream("./gps-data/slow.csv");
+const readStreamNice = fs.createReadStream("./gps-data/nice.csv");
 
 // This will wait until we know the readable stream is actually valid before doing anything
 readStreamOld.on('open', function () {
