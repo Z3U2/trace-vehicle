@@ -1,5 +1,4 @@
 const express = require('express'),
-    router = express.Router(),
     immovableDataController = require('../../controllers/immovable_data.controller');
 
 
@@ -10,6 +9,7 @@ exports.ImmovableDataRoute = class {
     }
 
     get router() {
+        let router = express.Router()
         router.get('/', immovableDataController.getData)
         router.post('/', (req, res, next) => {
             let data = {

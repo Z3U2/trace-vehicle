@@ -1,5 +1,4 @@
-const express = require('express'),
-      router  = express.Router(),
+const express = require('express')
       dataController = require('../../controllers/data.controller');
 
 
@@ -10,6 +9,7 @@ exports.DataRoute = class {
     }
 
     get router() {
+        let router = express.Router()
         router.get('/', dataController.getData)
         router.get('/markers',dataController.getMarkers)
         router.get('/lines',dataController.getLines)

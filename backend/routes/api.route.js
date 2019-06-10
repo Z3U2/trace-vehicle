@@ -1,5 +1,4 @@
 const express = require('express'),
-      router  = express.Router(),
       vehicle = require('./api/vehicle.route');
       immovable = require('./api/immovable.route');
 const { DataRoute } = require('./api/data.route');
@@ -12,12 +11,13 @@ exports.ApiRoute = class {
     }
 
     get router() {
+        let router = express.Router()
         let dataRouter = new DataRoute(this.dataRef).router
         let immovableDataRouter = new ImmovableDataRoute(this.immovableDataRef).router
         router.use('/data',dataRouter)
         router.use('/vehicles',vehicle)
         router.use('/immovables',immovable)
-        router.use('/immovable_data',ImmovableDataRoute)
+        router.use('/immovable_data',immovableDataRouter)
         return router
     }
 }
